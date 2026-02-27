@@ -61,6 +61,10 @@ Currently available options for day/night themes are:
 2. Click on `Edit Dashboard`,  `Manage resources` add `/local/ha-weather-big-wall-clock/ha-weather-big-wall-clock.js` as
    `JavaScript Module`.
 
+## Known issues
+- The card is not fully responsive on mobile devices.
+- Sometimes the video will play only a few frames then stops. FIX: refresh the page
+
 ### ⚙️ Configuration Settings
 
 All the configuration options are available inside the yaml field of the card.
