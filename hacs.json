@@ -5,5 +5,6 @@
   "zip_release": true,
   "filename": "weather-big-wall-clock.zip",
   "domain": "weather-big-wall-clock",
-  "country": "ALL"
+  "country": "ALL",
+  "homeassistant": "2026.2.3"
 }
