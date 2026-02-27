@@ -1,0 +1,227 @@
+@use "sass:map";
+@use "sass:meta";
+
+// Prefix for :root CSS variables
+$prefix: sgs- !default;
+
+// ============================
+// Primary colors
+// ============================
+$white: #fff !default;
+$black: #000 !default;
+
+
+// =============================================================================
+// COLOR PALETTE (Sorted Darkest to Brightest)
+// https://www.color-name.com/
+// =============================================================================
+
+// --- BLACKS & DEEP COLD TONES (0-1) ---
+$pure-black: #000000; // Absolute Zero - Perfect for OLED night backgrounds
+$dark-cobalt: #002D7A; // Deep Sea Blue - Heavy stroke for blue themes
+$moroccan-blue: #0057E9; // Vivid Royal Blue - Daytime accent or seconds indicator
+$ink-black: #050510; // Midnight Ink - Rich, high-contrast dark background
+$black-forest: #0D1405; // Darkest Everglade - Deepest green for forest themes
+$deep-navy: #150115; // Darkest Violet - Night background with a purple tint
+$off-black: #1A1A1A; // Soft Black - Reduces screen glare in low light
+$sky-blue: #1AA7EE; // Azure Spark - Bright daytime utility blue
+
+// --- DARK ACCENTS & MUTED MIDS (2-4) ---
+$charcoal: #222222; // Stone Gray - Neutral dark background for non-OLED
+$rangitoto: #2D3325; // Shadow Green - Earthy dark stroke for night modes
+$dark-charcoal: #333333; // Ash Gray - Subtle stroke for white text on black
+$oxblood: #420000; // Blood Red - Deepest red stroke for night vision
+$forest-green: #416D19; // Leafy Green - Natural, eye-safe daytime color
+$bronze-olive: #4B3E00; // Muddy Gold - Dark outline for yellow/gold digits
+
+// --- MEDIUM TONES & UTILITY (8-A) ---
+$maroon: #800000; // Classic Crimson - Deep red for AM/PM indicators
+$muted-gray: #848482; // Slate Gray - De-emphasized info like date or seconds
+$chartreuse: #87E911; // Electric Lime - Maximum daytime visibility safety color
+$arabic-grey: #888888; // Industrial Gray - Neutral balance for secondary text
+$moss-green: #A3B086; // Sage Green - Calming, organic tone for evening clocks
+
+// --- LIGHTS & HIGH VISIBILITY (D-F) ---
+$light-camel: #D8B382; // Sandstone - Warm, readable neutral for dates
+$night-red: #E11845; // Neon Cranberry - High-contrast red for night vision
+$wattle-soft: #E5DE44; // Mimosa Yellow - Muted yellow for soft visibility
+$amber-orange: #EF810E; // Fire Glow - High visibility without blue-light strain
+$vivid-gold: #F2CA19; // Cyber Gold - Sharpest contrast for daylight reading
+$tech-white: #F5F5F5; // Ghost White - Modern, soft off-white for light themes
+$peach-fuzz: #FFBE98; // Warm Peach - Gentle evening highlight color
+$pure-white: #FFFFFF; // Pure Light - The ultimate high-contrast clock digit color
+
+
+$naughty-green: #009639 !default;
+$yellow-munsell: #EFCB00 !default;
+$dark-tangerine: #DE7D00 !default;
+$beautiful-red: #BB2724 !default;
+
+// map of colors for easier management and rendering as CSS variables
+
+$blacks-deep: (
+  "pure-black": $pure-black,
+  "dark-cobalt": $dark-cobalt,
+  "moroccan-blue": $moroccan-blue,
+  "ink-black": $ink-black,
+  "black-forest": $black-forest,
+  "deep-navy": $deep-navy,
+  "off-black": $off-black,
+  "sky-blue": $sky-blue
+) !default;
+
+$dark-accents-muted: (
+  "charcoal": $charcoal,
+  "rangitoto": $rangitoto,
+  "dark-charcoal": $dark-charcoal,
+  "oxblood": $oxblood,
+  "forest-green": $forest-green,
+  "bronze-olive": $bronze-olive
+) !default;
+
+$medium-tones-utility: (
+  "maroon": $maroon,
+  "muted-gray": $muted-gray,
+  "chartreuse": $chartreuse,
+  "arabic-grey": $arabic-grey,
+  "moss-green": $moss-green
+) !default;
+
+$lights-high-visibility: (
+  "light-camel": $light-camel,
+  "night-red": $night-red,
+  "wattle-soft": $wattle-soft,
+  "amber-orange": $amber-orange,
+  "vivid-gold": $vivid-gold,
+  "tech-white": $tech-white,
+  "peach-fuzz": $peach-fuzz,
+  "pure-white": $pure-white,
+  "naughty-green": $naughty-green,
+  "yellow-munsell": $yellow-munsell,
+  "dark-tangerine": $dark-tangerine,
+  "beautiful-red": $beautiful-red
+) !default;
+
+// ------------------------------------------------
+$themes: (
+  "high-contrast": (
+    "short-name": "hc",
+    "mode": "day",
+    "bg": $pure-black,
+    "time": $pure-white,
+    "seconds": $moroccan-blue,
+    "date": $light-camel,
+    "ampm": $muted-gray,
+    "stroke": $dark-charcoal
+  ),
+  "safety-vivid": (
+    "short-name": "sf-vivid",
+    "mode": "day",
+    "bg": $pure-black,
+    "time": $vivid-gold,
+    "seconds": $chartreuse,
+    "date": $pure-white,
+    "ampm": $vivid-gold,
+    "stroke": $bronze-olive
+  ),
+  "solar-bright": (
+    "short-name": "solar-bright",
+    "mode": "day",
+    "bg": $pure-white,
+    "time": $amber-orange,
+    "seconds": $vivid-gold,
+    "date": $amber-orange,
+    "ampm": $vivid-gold,
+    "stroke": $pure-white
+  ),
+  "oceanic": (
+    "short-name": "oceanic-day",
+    "mode": "day",
+    "bg": $moroccan-blue,
+    "time": $pure-white,
+    "seconds": $vivid-gold,
+    "date": $pure-white,
+    "ampm": $vivid-gold,
+    "stroke": $dark-cobalt // Deep blue stroke
+  ),
+  "night-vision-red": (
+    "short-name": "nv-red",
+    "mode": "night",
+    "bg": $pure-black,
+    "time": $night-red,
+    "seconds": $muted-gray,
+    "date": $amber-orange,
+    "ampm": $maroon,
+    "stroke": $tech-white
+  ),
+  "low-light-green": (
+    "short-name": "ll-green",
+    "mode": "night",
+    "bg": $off-black,
+    "time": $moss-green,
+    "seconds": $wattle-soft,
+    "date": $muted-gray,
+    "ampm": $moss-green,
+    "stroke": $rangitoto,
+  ),
+  "deep-indigo": (
+    "short-name": "deep-indigo",
+    "mode": "night",
+    "bg": $deep-navy,
+    "time": $peach-fuzz,
+    "seconds": $sky-blue,
+    "date": $muted-gray,
+    "ampm": $sky-blue,
+    "stroke": $ink-black // Near-black navy stroke
+  ),
+  "forest-zen": (
+    "short-name": "forest-zen",
+    "mode": "night",
+    "bg": $charcoal,
+    "time": $forest-green,
+    "seconds": $moss-green,
+    "date": $arabic-grey,
+    "ampm": $forest-green,
+    "stroke": $black-forest // Dark forest stroke
+  )
+);
+
+// Colors
+$colors: (
+  'panels-transparency': rgba(255, 255, 255, 0.8),
+
+  // color of the stroke around the font,
+  // to improve readability on light backgrounds
+  'font-stroke-color-day': rgba(0, 0, 0, 0.5),
+  'font-stroke-color-night': #000000,
+
+  // hours and minutes color for day and night,
+  // also used as default color for other elements when no other options is used
+  'hours-minutes-day': #000000,
+  'hours-minutes-night': #ffffff,
+
+  // seconds color for day and night,
+  // also used as default color for other elements when no other options is used
+  'seconds-day': #ffff00,
+  'seconds-night': #00ffff,
+
+  // am/pm color for day and night,
+  // also used as default color for other elements when no other options is used
+  'ampm-day': #00ffff,
+  'ampm-night': #00ffff,
+
+  'date-day': #000000,
+  'date-night': #ffffff,
+
+  'theme-color-night': #ffffff,
+  'primary-color': #00ffff,
+
+  'white': $white,
+  'black': $black,
+);
+
+// font definitions
+$font-family-sans-serif: 'Inter', 'Roboto Condensed', 'Oswald', sans-serif;
+
+// border radius
+$border-radius: 0.5rem;

@@ -1,0 +1,101 @@
+@use "variables";
+@use "./mixins/theme";
+
+@each $theme-name, $value in variables.$themes {
+  [data-theme="#{$theme-name}"] {
+    @include theme.apply-theme($theme-name);
+  }
+}
+
+.big-weather-clock {
+
+  .middle {
+
+    .center {
+      .time-date {
+        /* TIME */
+        .time {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          font-variant-numeric: tabular-nums;
+
+          font-size: clamp(5rem, 20vw, 1rem);
+          font-weight: 600;
+          z-index: 2;
+
+          .clock-left-side {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: end;
+            order: 0;
+
+            .hours-minutes {
+              font-size: clamp(4rem, 24vw, 20vh);
+              font-weight: 700;
+              text-align: center;
+              line-height: 1;
+              color: var(--#{variables.$prefix}color-pure-white); // default color when no other options is used, and is for day time
+            }
+          }
+
+          .clock-right-side {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: end;
+            order: 0;
+
+            height: min-content;
+            font-size: 1em;
+
+            .seconds-container {
+              order: 0;
+              flex: none;
+              align-self: flex-start;
+              line-height: 1.5;
+
+              .seconds {
+                font-size: clamp(2.1rem, 4vw, 8vw);
+                font-weight: 800;
+                display: inline-block; /* Helps with precision height */
+                vertical-align: top;
+
+              }
+            }
+
+            .seconds-container, .ampm-container {
+              order: 1;
+              flex: none;
+              align-self: flex-start;
+
+              .ampm {
+                font-size: clamp(2.1rem, 4vw, 5rem);
+                font-weight: 800;
+                display: inline-block;
+                vertical-align: top; /* Changed from bottom to avoid extra spacing */
+              }
+            }
+          }
+        }
+
+        /* DATE */
+        .date {
+          position: relative;
+          font-size: clamp(2.5rem, 4vw, 6rem);
+          font-weight: 700;
+          text-align: center;
+          margin-top: 0.2rem;
+
+          line-height: 5rem;
+          letter-spacing: 0.05em;
+          text-transform: capitalize;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

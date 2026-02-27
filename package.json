@@ -1,0 +1,62 @@
+{
+  "name": "ha-weather-big-wall-clock",
+  "version": "1.0.0",
+  "description": "Home Assistant Weather Clock Card with video backgrounds",
+  "author": "Zaharia Constantin",
+  "license": "SEE LICENSE IN LICENSE",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "watch": "NODE_ENV=development webpack --watch",
+    "build:media": "node scripts/generate-hls.js"
+  },
+  "keywords": [
+    "home-assistant",
+    "custom-card",
+    "weather",
+    "clock"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/custom-cards/weather-big-wall-clock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/custom-cards/weather-big-wall-clock/issues",
+    "email": "constantin.zaharia@sgsolar.ro"
+  },
+  "homepage": "https://github.com/custom-cards/weather-big-wall-clock",
+  "dependencies": {
+    "hls.js": "^1.6.15",
+    "home-assistant-styles-manager": "^3.1.0",
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^2.0.2",
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.0.0",
+    "neostandard": "^0.12.2",
+    "eslint-plugin-html": "^8.1.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-lit": "^2.2.1",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-n": "^17.23.2",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-config-prettier": "^10.1.8",
+
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^6.7.1",
+
+    "file-loader": "^6.2.0",
+    "fluent-ffmpeg": "^2.1.3",
+    "globals": "^17.3.0",
+    "lit-scss-loader": "^2.0.1",
+    "mini-css-extract-plugin": "^2.9.4",
+    "sass": "^1.97.2",
+    "sass-loader": "^16.0.6",
+    "terser-webpack-plugin": "^5.3.16",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

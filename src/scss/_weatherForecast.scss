@@ -1,0 +1,81 @@
+@use 'mixins/basic';
+
+/* Forecast List */
+.center .current-forecast {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-self: normal;
+  flex: 1;
+
+  .weather-forecast {
+    border-radius: 10px;
+
+    .forecast-list {
+      display: flex;
+      flex-direction: column;
+
+      .forecast-item {
+
+        display: grid;
+        /* Day (1fr) | Icon (~40px fixed) | Temp (1fr) | Extra Details (2fr) */
+        grid-template-columns: 0.5fr 48px 1fr 3fr;
+        align-items: center;
+        padding: 5px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        color: white;
+        font-size: 0.9rem;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        .day-name {
+          font-size: 2.7rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          min-width: 40px;
+        }
+
+        .forecast-icon {
+          //font-size: 1.5rem;
+          width: 48px;
+          transform: scale(1.2);
+          @include basic.defaultImage();
+        }
+
+        .temp-range {
+          font-size: 2.7rem;
+          font-weight: 600;
+          text-align: center;
+          min-width: 70px;
+        }
+
+        .extra-details {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: end;
+          gap: 5px;
+          color: #aaa;
+          font-size: 1.2rem;
+
+          .details-weather {
+            ha-icon {
+              //--mdc-icon-size: 18px;
+              margin-right: 2px;
+              vertical-align: middle;
+              color: var(--primary-color)
+            }
+          }
+
+          .day-summary {
+            font-size: 1.3rem;
+            color: #ffff;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+:host {
+  --accent: #03a9f4;
+  --bg: #1c1c1c;
+}
+
+.wrapper {
+  background: var(--bg);
+  color: white;
+  border-radius: 12px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 800px;
+}
+
+.tabs {
+  display: flex;
+  background: #252525;
+  border-bottom: 1px solid #333;
+  overflow-x: auto
+}
+
+.tab {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+.content {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.group-title {
+  color: var(--accent);
+  font-size: 0.8em;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+input[type="text"], select {
+  background: #333;
+  border: 1px solid #444;
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.actions {
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  background: #252525;
+}
+
+.apply-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.settings-group {
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 15px 0;
+  background: #252525;
+}
+
+.group-header {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #03a9f4;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}

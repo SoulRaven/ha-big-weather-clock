@@ -1,0 +1,46 @@
+@use "sass:map";
+
+@use "../variables";
+@use "basic";
+
+// Mixin to apply a theme by name
+// the vars with values are already defined in :host,
+// so we just need to apply them to the relevant elements
+@mixin apply-theme($name) {
+  $config: map.get(variables.$themes, $name);
+
+  $short: map.get($config, "short-name");
+  $mode: map.get($config, "mode");
+
+  $s-color: map.get($config, "stroke");
+
+  //background-color: var(--#{variables.$prefix}#{$short}-#{$mode}-bg);
+  transition: background-color 0.6s ease, color 0.6s ease;
+
+  .time-date {
+    .time {
+      .hours-minutes {
+        color: var(--#{variables.$prefix}#{$short}-#{$mode}-time) !important;
+        @include basic.text-stroke($s-color, $short, $mode);
+      }
+
+      .seconds-container {
+        color: var(--#{variables.$prefix}#{$short}-#{$mode}-seconds) !important;
+        @include basic.text-stroke($s-color, $short, $mode);
+      }
+
+      .ampm-container {
+        .basic {
+          color: var(--#{variables.$prefix}#{$short}-#{$mode}-ampm) !important;
+          @include basic.text-stroke($s-color, $short, $mode);
+        }
+      }
+    }
+
+    .date {
+      color: var(--#{variables.$prefix}#{$short}-#{$mode}-date);
+      @include basic.text-stroke($s-color, $short, $mode);
+    }
+
+  }
+}

@@ -1,0 +1,59 @@
+### Angular template
+## Angular ##
+# compiled output
+tmp/
+app/**/*.js
+app/**/*.js.map
+
+# dependencies
+node_modules/
+bower_components/
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# misc
+.sass-cache/
+connect.lock/
+coverage/
+libpeerconnection.log/
+npm-debug.log
+testem.log
+typings/
+.angular/
+!media/video/
+dist/
+
+# e2e
+e2e/*.js
+e2e/*.map
+
+# System Files
+.DS_Store/
+
+# Webpack
+/node_modules
+/test/js
+/test/browsertest/js
+/test/fixtures/temp-*
+/test/temp
+/test/ChangesAndRemovals
+/test/**/dev-defaults.webpack.lock
+/benchmark/js
+/benchmark/fixtures
+/examples/**/dist
+/assembly/**/*.wat
+/assembly/**/*.wasm
+/coverage/
+/.temp_cache
+/.nyc_output
+/.jest-cache
+.DS_Store
+*.log
+.cache
+.eslintcache
+package-lock.json
+.temp_cache
+secrets
+.secret

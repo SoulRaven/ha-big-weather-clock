@@ -1,0 +1,135 @@
+@use "variables";
+
+@use 'mixins/basic';
+
+.big-weather-clock {
+  .middle {
+    & .left {
+      .middle-left-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--ha-space-2);
+
+        .sensor-block {
+          display: flex;
+          flex-direction: column;
+          transition: transform 0.2s ease-in-out;
+          padding:5px;
+          background: rgba(0, 0, 0, 0.3);
+          border-radius: 8px;
+
+          &:hover {
+            transform: translateX(2px);
+          }
+
+          &.stale {
+            opacity: 0.7;
+            border-style: dashed;
+          }
+
+          .sensor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 10px;
+
+            .location-title {
+              font-size: 1.2rem;
+              font-weight: 500;
+              margin: 0;
+              color: var(--primary-text-color);
+            }
+          }
+
+          .sensor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 Columns [Requested] */
+            gap: 5px;
+
+            .sensor-row {
+              display: grid;
+              align-items: center;
+              gap: 5px;
+              padding: 8px;
+              background: rgba(0, 0, 0, 0.2);
+              border-radius: 8px;
+
+              ha-icon {
+                --mdc-icon-size: 20px;
+                color: var(--primary-color);
+              }
+
+              .sensor-time {
+                font-size: 1rem;
+                color: var(--secondary-text-color);
+                display: block;
+              }
+
+              @include basic.leftPanel-sensors;
+            }
+          }
+
+          .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+            font-size: 0.8rem;
+
+            .battery-info {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              color: var(--secondary-text-color);
+
+              @include basic.leftPanel-sensors;
+
+              ha-icon {
+                --mdc-icon-size: 24px !important;
+              }
+
+              .sensor-value {
+                font-size: 1.2rem !important;
+                padding-right: 4px;
+              }
+
+              .sensor-label {
+                font-size: 1.2rem !important;
+              }
+            }
+
+            .mold-badge {
+              padding: 2px 8px;
+              border-radius: 10px;
+              background: var(--warning-color);
+              color: var(--#{variables.$prefix}pure-white);
+              font-weight: 600;
+              font-size: .9rem;
+
+              &.mold-risk-safe {
+                color: var(--#{variables.$prefix}pure-white);
+                background: var(--#{variables.$prefix}naughty-green);
+              }
+
+              &.mold-risk-warning {
+                color: var(--#{variables.$prefix}pure-black);
+                background: var(--#{variables.$prefix}yellow-munsell);
+              }
+
+              &.mold-risk-high {
+                color: var(--#{variables.$prefix}pure-white);
+                background: var(--#{variables.$prefix}dark-tangerine);
+              }
+
+              &.mold-risk-critical {
+                color: var(--#{variables.$prefix}pure-white);
+                background: var(--#{variables.$prefix}beautiful-red);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

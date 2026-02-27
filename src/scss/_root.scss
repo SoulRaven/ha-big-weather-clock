@@ -1,0 +1,72 @@
+@use "sass:meta";
+@use "sass:map";
+@use "sass:list";
+
+@use 'variables';
+
+:host {
+
+  // render individual themes colors as CSS variables
+  @each $name, $color in variables.$blacks-deep {
+    --#{variables.$prefix}#{$name}: #{$color};
+  }
+
+  @each $name, $color in variables.$dark-accents-muted {
+    --#{variables.$prefix}#{$name}: #{$color};
+  }
+
+  @each $name, $color in variables.$medium-tones-utility {
+    --#{variables.$prefix}#{$name}: #{$color};
+  }
+
+  @each $name, $color in variables.$lights-high-visibility{
+    --#{variables.$prefix}#{$name}: #{$color};
+  }
+
+  // render individual colors as CSS variables
+  @each $name, $color in variables.$colors {
+    --#{variables.$prefix}#{$name}: #{$color};
+  }
+
+  // Render themes as CSS variables
+  $allowed-props: ("bg", "time", "seconds", "date", "ampm", "stroke");
+  @each $theme-name, $map in variables.$themes {
+    // save metadata first
+    $short: map.get($map, "short-name");
+    $mode: map.get($map, "mode");
+
+    @each $property, $value in $map {
+      @if list.index($allowed-props, $property) {
+        --#{variables.$prefix}#{$short}-#{$mode}-#{$property}: #{$value};
+      }
+
+    }
+  }
+
+
+  // fonts
+  --#{variables.$prefix}font-sans-serif: #{meta.inspect(variables.$font-family-sans-serif)};
+
+  --#{variables.$prefix}border-radius: #{variables.$border-radius};
+
+  inset: 0;
+  color: var(--#{variables.$prefix}pure-white);
+  overflow: hidden;
+}
+
+:host([panel]) ha-card {
+  /* If --header-height is 0px, height becomes 100vh */
+  height: calc(100vh - var(--header-height, 56px)) !important;
+  margin: 0;
+}
+
+ha-card {
+
+}
+
+[part="kiosk-root"] {
+  height: 100%;
+  width: 100%;
+  //display: flex;
+  //flex-direction: column;
+}

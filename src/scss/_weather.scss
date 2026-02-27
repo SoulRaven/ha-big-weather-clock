@@ -1,0 +1,183 @@
+@use 'mixins/basic';
+
+@use "variables";
+
+/* Current Weather */
+.right {
+
+  .current-weather {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    //padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    .main-data {
+      flex: 1.2;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      border-right: 1px solid var(--primary-color, #eee);
+      gap: 10px;
+
+      img.weather-current-icon {
+        height: 96px;
+        transform: scale(1.2);
+        margin-top: 5px;
+      }
+
+      .weather-current-temperature {
+        font-size: clamp(2vw, 4vw, 8vw);
+        font-weight: 600;
+        line-height: 1;
+      }
+    }
+
+    .main-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid var(--divider-color, #eee);
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+
+      .weather-current-name {
+        font-size: 2rem;
+        font-weight: 600;
+        text-transform: capitalize;
+        text-align: center;
+      }
+    }
+
+    .metrics-panel {
+      flex: 2;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px 5px;
+      padding-left: 5px;
+      align-self: stretch;
+    }
+
+    .metric-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .metric-icon {
+        color: var(--primary-color);
+        --mdc-icon-size: 48px;
+        @include basic.defaultImage();
+      }
+
+      .metric-data {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+          font-size: 1rem;
+          opacity: 0.6;
+          text-transform: uppercase;
+        }
+
+        .value {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .weather-current-nameBlock {
+      text-align: end;
+
+      .weather-current-lastUpdate {
+        font-size: 1rem;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .weather-alerts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+
+    .alert-item {
+      border-radius: 8px;
+      background: rgba(0, 0, 0, .2);
+      padding: 10px;
+      margin-bottom: 5px;
+
+      .weather-alert-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .icon-container {
+          padding: 8px;
+          display: flex;
+
+          .weather-alerts-icons {
+            height: 48px;
+            @include basic.defaultImage();
+          }
+
+          .time-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 0;
+            color: var(--secondary-text-color);
+
+            .time-row ha-icon {
+              --mdc-icon-size: 16px;
+            }
+
+            .time-text {
+              font-size: 0.85rem;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              flex-wrap: wrap;
+
+              .arrow {
+                color: var(--disabled-text-color);
+              }
+            }
+          }
+        }
+      }
+
+      .weather-alert-description {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: var(--primary-text-color);
+        padding: 10px;
+        border-top: 1px solid var(--divider-color);
+      }
+
+      .weather-alert-tags-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+        .tag-badge {
+          background: var(--#{variables.$prefix}sky-blue);
+          color: var(--primary-text-color);
+          padding: 4px 10px;
+          border-radius: 20px;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+

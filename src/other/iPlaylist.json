@@ -1,0 +1,115 @@
+{
+  "thunderstorm_with_light_rain": {},
+  "thunderstorm_with_rain": {},
+  "thunderstorm_with_heavy_rain": {},
+  "light_thunderstorm": {},
+  "thunderstorm": {},
+  "heavy_thunderstorm": {},
+  "ragged_thunderstorm": {},
+  "thunderstorm_with_light_drizzle": {},
+  "thunderstorm_with_drizzle": {},
+  "thunderstorm_with_heavy_drizzle": {},
+  "light_intensity_drizzle": {},
+  "drizzle": {},
+  "heavy_intensity_drizzle": {},
+  "light_intensity_drizzle_rain": {},
+  "drizzle_rain": {},
+  "heavy_intensity_drizzle_rain": {},
+  "shower_rain_and_drizzle": {},
+  "heavy_shower_rain_and_drizzle": {},
+  "shower_drizzle": {},
+  "light_rain": {},
+  "moderate_rain": {},
+  "heavy_intensity_rain": {},
+  "very_heavy_rain": {},
+  "extreme_rain": {},
+  "freezing_rain": {},
+  "light_intensity_shower_rain": {},
+  "shower_rain": {},
+  "heavy_intensity_shower_rain": {},
+  "ragged_shower_rain": {},
+  "light_snow": {},
+  "snow": {
+    "night": [
+      "snow-night-01.jpg",
+      "snow-night-02.jpg",
+      "snow-night-03.jpg"
+    ]
+  },
+  "heavy_snow": {},
+  "sleet": {},
+  "light_shower_sleet": {},
+  "shower_sleet": {},
+  "light_rain_and_snow": {},
+  "rain_and_snow": {},
+  "light_shower_snow": {},
+  "shower_snow": {},
+  "heavy_shower_snow": {},
+  "mist": {
+    "day": [],
+    "night": [
+      "mist-night-01.jpg",
+      "mist-night-02.jpg",
+      "mist-night-03.jpg"
+    ]
+  },
+  "smoke": {},
+  "haze": {},
+  "sand_dust_whirls": {},
+  "fog": {
+    "day": [
+      "fog-day-01.jpg",
+      "fog-day-02.jpg",
+      "fog-day-03.jpg"
+    ],
+    "night": []
+  },
+  "sand": {},
+  "dust": {},
+  "volcanic_ash": {},
+  "squalls": {},
+  "tornado": {},
+  "clear_sky": {
+    "day": [
+      "clear_sky-day-01.jpg",
+      "clear_sky-day-02.jpg",
+      "clear_sky-day-03.jpg",
+      "clear_sky-day-04.jpg",
+      "clear_sky-day-05.jpg",
+      "clear_sky-day-06.jpg"
+    ],
+    "night": [
+      "clear_sky-night-01.jpg",
+      "clear_sky-night-02.jpg",
+      "clear_sky-night-03.jpg",
+      "clear_sky-night-04.jpg",
+      "clear_sky-night-05.jpg",
+      "clear_sky-night-06.jpg",
+      "clear_sky-night-07.jpg"
+    ]
+  },
+  "few_clouds": {
+    "day": [
+      "few_clouds-day-01.jpg",
+      "few_clouds-day-02.jpg",
+      "few_clouds-day-03.jpg",
+      "few_clouds-day-04.jpg"
+    ],
+    "night": [
+      "few_clouds-night-01.jpg",
+      "few_clouds-night-02.jpg",
+      "few_clouds-night-03.jpg",
+      "few_clouds-night-04.jpg",
+      "few_clouds-night-05.jpg"
+    ]
+  },
+  "scattered_clouds": {},
+  "broken_clouds": {},
+  "overcast_clouds": {
+    "day": [],
+    "night": [
+      "overcast_clouds-night-01.jpg",
+      "overcast_clouds-night-02.jpg"
+    ]
+  }
+}

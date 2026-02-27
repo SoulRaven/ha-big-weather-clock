@@ -1,0 +1,64 @@
+@media (min-width: 390px) {
+  .big-weather-clock {
+    .middle {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "main-center"
+        "right"
+        "left";
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .big-weather-clock {
+    .middle {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "main-center"
+        "right"
+        "left";
+
+      .center {
+        .time-date {
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .big-weather-clock {
+    .middle {
+      grid-template-columns:
+        minmax(30rem, 1fr)
+        minmax(20rem, 3fr)
+        minmax(30rem, 1fr);
+      grid-template-areas: "left main-center right";
+
+      .center {
+        align-items: center;
+
+        .time {
+          font-size: 2rem;
+
+          .clock-right-side {
+            line-height: .5 !important;
+          }
+        }
+
+        .date {
+          line-height: .5;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-clock-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+}

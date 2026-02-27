@@ -1,0 +1,59 @@
+@use "../variables";
+
+@mixin clearfix {}
+
+@mixin defaultImage {
+  max-width: 100%;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: .75rem;
+  font-size: .75rem
+}
+
+// Creates a text stroke effect by applying multiple text shadows around the text.
+// The color of the stroke is determined by the $color parameter passed to the mixin.
+@mixin text-stroke($color, $short, $mode) {
+  text-shadow:
+    -1px -1px 0 var(--#{variables.$prefix}#{$short}-#{$mode}-stroke),
+    1px -1px 0 var(--#{variables.$prefix}#{$short}-#{$mode}-stroke),
+    -1px 1px 0 var(--#{variables.$prefix}#{$short}-#{$mode}-stroke),
+    1px 1px 0 var(--#{variables.$prefix}#{$short}-#{$mode}-stroke);
+}
+
+@mixin leftPanel-sensors {
+  .sensor-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2px;
+    align-items: center;
+
+    ha-icon {
+      --mdc-icon-size: 32px;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    .sensor-value {
+      font-weight: 500;
+      font-size: 2rem;
+      color: var(--primary-text-color);
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    .sensor-label {
+      font-size: 1.2rem;
+      color: var(--secondary-text-color);
+      text-transform: capitalize;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width:240px;
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+}
