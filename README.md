@@ -1,8 +1,12 @@
 ## Home Assistant Weather Card with a video/images background
 #### *__readme and docs are work in process, please be patient__*
 
+![hacs custom](https://img.shields.io/badge/hacs-custom-orange.svg)
+![HACS Default](https://img.shields.io/badge/HACS-Default-blue.svg)
+![HACS Action](https://github.com/SoulRaven/ha-weather-big-wall-clock/actions/workflows/hacs-validate.yml/badge.svg)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/SoulRaven/ha-big-weather-clock)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SoulRaven/ha-big-weather-clock/total)
+![Last commit](https://img.shields.io/github/last-commit/SoulRaven/ha-weather-big-wall-clock.svg)
 
 ### Images of the card
 <p float="center">
