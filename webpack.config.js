@@ -27,13 +27,13 @@ const packageInfo = require("./package.json"),
 console.log(`Build hash: ${buildHash}`);
 console.log(`Building for environment: ${process.env?.NODE_ENV}`);
 
-const isProduction = process.env?.NODE_ENV === 'development' || 'production';
+const isDevelopment = process.env?.NODE_ENV === 'development';
 
 export default (env, args) => {
 
 	const basicConfig = {
 		mode: process.env.NODE_ENV,
-		devtool: isProduction ? false : 'eval-source-map',
+		devtool: isDevelopment ? 'source-map' : false,
 		entry: {
 			[packageInfo.name]: [
 				path.resolve("src", "js", "utils", "eventBusMixin.js"),
@@ -52,10 +52,7 @@ export default (env, args) => {
 				module: true,
 			},
 		},
-		externals: {
-			'hls.js': 'Hls',
-			// 'lit': 'lit',
-		},
+		externals: {},
 		resolve: {
 			alias: {
 				'@EventBus': path.resolve(__dirname, 'src/js/utils/eventBusMixin.js'),
@@ -81,9 +78,6 @@ export default (env, args) => {
 						/node_modules/,
 						path.resolve(__dirname, "src/other")
 					],
-					// use: {
-					// 	loader: 'babel-loader',
-					// },
 				},
 				{
 					test: /\.css|\.s(c|a)ss$/,
@@ -162,7 +156,7 @@ export default (env, args) => {
 	};
 
 	// Add the ZIP plugin only for production mode
-	if (isProduction) {
+	if (!isDevelopment) {
 		basicConfig.plugins.push(
 			new ZipPlugin({
 				filename: `${packageInfo.name}`, // The name of the resulting zip file
