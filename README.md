@@ -153,11 +153,11 @@ cards:
   showAMPM: true
   hidePanels: false
   theme:
-  day: 'solar-bright'
+    day: 'solar-bright'
   webPath: 'https://media.progeek.ro'
   mediaManager:
-  renderType: 'both'
-  conditionMode: 'description'
+    renderType: 'both'
+    conditionMode: 'description'
   localSensors:
     - name: 'Beedroom'
       device_entity: 'cb87dabaf5ecc0d1beb3a33a4772d4ef'
@@ -168,23 +168,23 @@ cards:
       device_entity: 'a7e9e6f6543a325d47ffc8aec35f7cde'
     - name: 'Living'
       device_entity: '41b8b4b0e732d704dc65db39d02f41d2'
-    - name: Victron
+    - name: 'Victron'
       extra_entities:
         - 'sensor.victron_temperature_temperature_6'
         - 'sensor.victron_battery_temperature_2'
         - 'sensor.victron_battery_soc_2'
-          weatherConfig:
-          weatherProvider: 'openweathermap'
-          owm_apiKey: !secret openweathermap_api_key
-          owm_description: detailed
-          owm_conditions: detailed
-          language: 'en'
-          showLabels: true
-          units: 'metric'
-          weatherForecastDays: 8
-          icons:
-          iconSet: 'maskinThings'
-          type: 'animated'
+  weatherConfig:
+    weatherProvider: 'openweathermap'
+    owm_apiKey: !secret openweathermap_api_key
+    owm_description: detailed
+    owm_conditions: detailed
+    language: 'en'
+    showLabels: true
+    units: 'metric'
+    weatherForecastDays: 8
+    icons:
+     iconSet: 'maskinThings'
+     type: 'animated'
 
 ```
 
