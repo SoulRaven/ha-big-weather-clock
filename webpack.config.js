@@ -133,6 +133,7 @@ export default (env, args) => {
 				patterns: [
 					{ from: "./src/other/", to: "other/", force: false },
 					{ from: "./media/icons/", to: "media/icons/", force: false },
+					{ from: "./media/img/", to: "media/img/", force: false },
 				],
 			}),
 			new webpack.DefinePlugin({

@@ -22,7 +22,7 @@ npm-debug.log
 testem.log
 typings/
 .angular/
-!media/video/
+media/
 
 # e2e
 e2e/*.js
@@ -56,3 +56,5 @@ package-lock.json
 .temp_cache
 secrets
 .secret
+
+ha-weather-big-wall-clock.zip
