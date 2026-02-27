@@ -580,7 +580,7 @@ export class MediaManager extends EventBusMixin() {
 		this.runCount++;
 		logger.debug(`Run ${this.runCount}/${this.minRuns} complete.`);
 
-		if (this.canTransition && this.runCount >= this.minRuns) {
+		if (this.canTransition && this.runCount > this.minRuns) {
 			this._transition();
 		} else {
 			element.currentTime = 0;

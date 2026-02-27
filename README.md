@@ -9,7 +9,7 @@
 ![Last commit](https://img.shields.io/github/last-commit/SoulRaven/ha-weather-big-wall-clock.svg)
 
 ### Images of the card
-<p float="center">
+<p float="left">
   <img src="docs/images/main_image_day.png" width="50%" />
   <img src="docs/images/main_image_night.png" width="50%" />
 </p>
