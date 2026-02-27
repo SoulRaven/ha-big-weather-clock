@@ -1,0 +1,22 @@
+name: HACS Validate
+
+permissions:
+  contents: read
+
+on:
+  push:
+    tags:
+      - 'v*'
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  validate-hacs:
+    if: github.repository == 'SoulRaven/ha-big-weather-clock'
+    runs-on: "ubuntu-latest"
+    steps:
+      - uses: "actions/checkout@v4"
+      - name: HACS validation
+        uses: "hacs/action@main"
+        with:
+          category: "plugin"

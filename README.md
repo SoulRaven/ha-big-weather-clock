@@ -1,3 +1,16 @@
+# Home Assistant Weather Card with video/images background
+
+### Installation
+
+#### HACS
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=SoulRaven&repository=ha-big-weather-clock&category=plugin)
+
+#### Manual
+
+1. Copy the content of the dist archive inside  to your `/var/lib/hass/www/ha-weather-big-wall-clock` folder.
+2. Click on `Edit Dashboard`,  `Manage resources` add `/local/ha-weather-big-wall-clock/ha-weather-big-wall-clock.js` as
+   `JavaScript Module`.
 
 ## Icons are downloaded from online resources and are using MIT license or Creative Commons Attribution 4.0
 - [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
