@@ -1,7 +1,14 @@
-# Home Assistant Weather Card with video/images background
+## Home Assistant Weather Card with a video/images background
+#### *__readme and docs are work in process, please be patient__*
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/SoulRaven/ha-big-weather-clock)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SoulRaven/ha-big-weather-clock/total)
+
+### Images of the card
+<p float="center">
+  <img src="docs/images/main_image_day.png" width="50%" />
+  <img src="docs/images/main_image_night.png" width="50%" />
+</p>
 
 ### Installation
 
@@ -16,13 +23,33 @@ Also, part of the card is also icons that are configuration from a list of icons
 ### Images and Videos
 Images are stored in the local folder of the dist. However, they also are stored in a hosting space on the web, so you can use them even if you don't want to use HACS, but also you can add your own images by using the media manager configuration.
 Consider also the hosting space is limited and only offered as a bare minimum solution for the community.
-Keep in mind that the card is using a lot of resources, and the video and images are occupation a lot of space, please consider hosting your own images and videos. and use the media manager configuration to point to them.
+Keep in mind that the card is using a lot of resources, and the video and images are occupation a lot of space, please consider hosting your own images and videos. And use the media manager configuration to point to them.
 
 ### Icons
 
 ### Themes
+For the day/night circle, the card is using the sun entity as default.
+Based on that you have the options to select different themes for the day and night.
+Currently available options for day/night themes are:
+
+| Type  | Name               | Value              |
+|:------|:-------------------|:-------------------|
+| Day   | `High Contrast`    | `high-contrast`    |
+| Day   | `Safety Vivid`     | `safety-vivid`     |
+| Day   | `Solar Bright`     | `solar-bright`     |
+| Day   | `Oceanic`          | `oceanic`          |
+| Night | `Night Vision Red` | `night-vision-red` |
+| Night | `Low Light Green`  | `low-light-green`  |
+| Night | `Deep Indigo`      | `deep-indigo`      |
+| Night | `Forest Zen`       | `forest-zen`       |
+
 
 ### Playlist for images and videos
+
+### Weather providers
+- Home Assistant – not implemented yet
+- OpenWeatherMap - implemented, see the guide below
+- ANM - not implemented yet/WIP
 
 #### Manual
 
@@ -82,7 +109,82 @@ All the configuration options are available inside the yaml field of the card.
 | `weatherConfig.icons.iconSet`         | `String` | Set: `amcharts`, `basmilius`, `metno`, `maskinThings`, etc.    |
 | `weatherConfig.icons.type`            | `String` | Icon animation: `animated` or `static`.                        |
 
-## Icons are downloaded from online resources and are using MIT license or Creative Commons Attribution 4.0
+## Example of the configuration
+Bellow is an example of the configuration for the card.
+Card is best used in a single mode using Kiosk options activated.
+Recomanded config is to have the dashboard defined inside the `config/lovelace/dashboards.yaml` file.
+
+```yaml
+lovelace-bigwallclock:
+  mode: yaml
+  title: Big Wall Clock
+  icon: mdi:clock-digital
+  show_in_sidebar: true
+  require_admin: false
+  filename: lovelace/dashboards/lovelace-bigwallclock/bigwallclock.yaml
+```
+Then inside the `bigwallclock.yaml` file
+```yaml
+title: Big Wall Clock
+#background: var(--background-image)
+#background: 'center / cover no-repeat url("/local/backgrounds/grey2.jpg") fixed'
+decluttering_templates: !include_dir_merge_named lovelace/decluttering_templates/
+views:
+  - !include views/bigWeatherClock.yaml
+```
+
+And finaly the `bigWeatherClock.yaml` file
+
+```yaml
+title: Wall Clock
+type: panel
+cards:
+
+- type: custom:big-wall-clock-video
+  day_night_entity: sun.sun
+  timeFormat: 'HH:mm:ss'
+  dateFormat: 'DD-MM-YYYY ddd'
+  timezone: 'Europe/Bucharest'
+  locale: 'ro'
+  showAMPM: true
+  hidePanels: false
+  theme:
+  day: 'solar-bright'
+  webPath: 'https://media.progeek.ro'
+  mediaManager:
+  renderType: 'both'
+  conditionMode: 'description'
+  localSensors:
+    - name: 'Beedroom'
+      device_entity: 'cb87dabaf5ecc0d1beb3a33a4772d4ef'
+      extra_entities:
+    - name: 'Kitchen'
+      device_entity: 'e5a604226563a11b89c8172c2e957831'
+    - name: 'Balcony'
+      device_entity: 'a7e9e6f6543a325d47ffc8aec35f7cde'
+    - name: 'Living'
+      device_entity: '41b8b4b0e732d704dc65db39d02f41d2'
+    - name: Victron
+      extra_entities:
+        - 'sensor.victron_temperature_temperature_6'
+        - 'sensor.victron_battery_temperature_2'
+        - 'sensor.victron_battery_soc_2'
+          weatherConfig:
+          weatherProvider: 'openweathermap'
+          owm_apiKey: !secret openweathermap_api_key
+          owm_description: detailed
+          owm_conditions: detailed
+          language: 'en'
+          showLabels: true
+          units: 'metric'
+          weatherForecastDays: 8
+          icons:
+          iconSet: 'maskinThings'
+          type: 'animated'
+
+```
+
+### Icons are downloaded from online resources and are using MIT license or Creative Commons Attribution 4.0
 - [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
 - [MET Weather API icons](https://github.com/metno/weathericons/tree/main)
 - [Makin-Things/weather-icons](https://github.com/Makin-Things/weather-icons)
@@ -91,4 +193,10 @@ All the configuration options are available inside the yaml field of the card.
 - [rodrigokamada/openweathermap](https://github.com/rodrigokamada/openweathermap)
 - [erikflowers/weather-icons](https://github.com/erikflowers/weather-icons) - **not implemented yet**
 
-## for video the story is a little bit different, and you have to do your own research
+### for video the story is a little bit different, and you have to do your own research
+
+## Issues
+
+~~If~~ When you experience issues/bugs with this, the best way to report them is
+to open an issue in **this** repo.
+[Issue link](https://github.com/SoulRaven/ha-weather-big-wall-clock/issues)
