@@ -1,5 +1,8 @@
 # Home Assistant Weather Card with video/images background
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/SoulRaven/ha-big-weather-clock)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SoulRaven/ha-big-weather-clock/total)
+
 ### Installation
 
 #### HACS
