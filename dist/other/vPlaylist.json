@@ -1,0 +1,456 @@
+{
+  "thunderstorm_with_light_rain": {
+    "day": [
+      "thunderstorm_with_light_rain-day-01.mp4",
+      "thunderstorm_with_light_rain-day-02.mp4",
+      "thunderstorm_with_light_rain-day-03.mp4"
+    ],
+    "night": [
+      "thunderstorm_with_light_rain-night-01.mp4",
+      "thunderstorm_with_light_rain-night-02.mp4",
+      "thunderstorm_with_light_rain-night-03.mp4"
+    ]
+  },
+  "thunderstorm_with_rain": {
+    "day": [
+      "thunderstorm_with_rain-day-01.mp4",
+      "thunderstorm_with_rain-day-02.mp4",
+      "thunderstorm_with_rain-day-03.mp4",
+      "thunderstorm_with_rain-day-04.mp4"
+    ],
+    "night": [
+      "thunderstorm_with_rain-night-01.mp4",
+      "thunderstorm_with_rain-night-02.mp4",
+      "thunderstorm_with_rain-night-03.mp4"
+    ]
+  },
+  "thunderstorm_with_heavy_rain": {
+    "day": [
+      "thunderstorm_with_heavy_rain-day-01.mp4"
+    ],
+    "night": [
+      "thunderstorm_with_heavy_rain-night-01.mp4",
+      "thunderstorm_with_heavy_rain-night-02.mp4",
+      "thunderstorm_with_heavy_rain-night-03.mp4",
+      "thunderstorm_with_heavy_rain-night-04.mp4",
+      "thunderstorm_with_heavy_rain-night-05.mp4",
+      "thunderstorm_with_heavy_rain-night-06.mp4",
+      "thunderstorm_with_heavy_rain-night-07.mp4"
+    ]
+  },
+  "light_thunderstorm": {
+    "day": [
+      "light_thunderstorm-day-01.mp4",
+      "light_thunderstorm-day-02.mp4",
+      "light_thunderstorm-day-03.mp4",
+      "light_thunderstorm-day-04.mp4",
+      "light_thunderstorm-day-05.mp4"
+    ],
+    "night": [
+      "light_thunderstorm-night-01.mp4",
+      "light_thunderstorm-night-02.mp4",
+      "light_thunderstorm-night-03.mp4"
+    ]
+  },
+  "thunderstorm": {
+    "day": [
+      "thunderstorm-day-01.mp4",
+      "thunderstorm-day-02.mp4",
+      "thunderstorm-day-03.mp4",
+      "thunderstorm-day-04.mp4"
+    ],
+    "night": [
+      "thunderstorm-night-01.mp4",
+      "thunderstorm-night-02.mp4",
+      "thunderstorm-night-03.mp4",
+      "thunderstorm-night-04.mp4",
+      "thunderstorm-night-05.mp4"
+    ]
+  },
+  "heavy_thunderstorm": {
+    "day": [
+      "heavy_thunderstorm-day-01.mp4",
+      "heavy_thunderstorm-day-02.mp4",
+      "heavy_thunderstorm-day-03.mp4",
+      "heavy_thunderstorm-day-04.mp4"
+    ],
+    "night": [
+      "heavy_thunderstorm-night-01.mp4",
+      "heavy_thunderstorm-night-02.mp4",
+      "heavy_thunderstorm-night-03.mp4",
+      "heavy_thunderstorm-night-04.mp4"
+    ]
+  },
+  "ragged_thunderstorm": {
+    "day": [],
+    "night": []
+  },
+  "thunderstorm_with_light_drizzle": {
+    "day": [
+      "thunderstorm_with_light_drizzle-day-01.mp4"
+    ],
+    "night": []
+  },
+  "thunderstorm_with_drizzle": {
+    "day": [
+      "thunderstorm_with_drizzle-day-01.mp4"
+    ],
+    "night": []
+  },
+  "thunderstorm_with_heavy_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "light_intensity_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "drizzle": {
+    "day": [],
+    "night": []
+  },
+  "heavy_intensity_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "light_intensity_drizzle_rain": {
+    "day": [],
+    "night": []
+  },
+  "drizzle_rain": {
+    "day": [],
+    "night": []
+  },
+  "heavy_intensity_drizzle_rain": {
+    "day": [],
+    "night": []
+  },
+  "shower_rain_and_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "heavy_shower_rain_and_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "shower_drizzle": {
+    "day": [],
+    "night": []
+  },
+  "light_rain": {
+    "day": [
+      "light_rain-day-01.mp4",
+      "light_rain-day-02.mp4"
+    ],
+    "night": [
+      "light_rain-night-01.mp4",
+      "light_rain-night-02.mp4",
+      "light_rain-night-03.mp4"
+    ]
+  },
+  "moderate_rain": {
+    "day": [
+      "moderate_rain_day-01.mp4",
+      "moderate_rain_day-02.mp4",
+      "moderate_rain_day-03.mp4",
+      "moderate_rain_day-04.mp4"
+    ],
+    "night": [
+      "moderate_rain_night-01.mp4",
+      "moderate_rain_night-02.mp4"
+    ]
+  },
+  "heavy_intensity_rain": {
+    "day": [
+      "heavy_intensity_rain-day-01.mp4"
+    ],
+    "night": []
+  },
+  "very_heavy_rain": {
+    "day": [],
+    "night": []
+  },
+  "extreme_rain": {
+    "day": [],
+    "night": []
+  },
+  "freezing_rain": {
+    "day": [],
+    "night": []
+  },
+  "light_intensity_shower_rain": {
+    "day": [],
+    "night": []
+  },
+  "shower_rain": {
+    "day": [
+      "shower_rain-day-01.mp4"
+    ],
+    "night": []
+  },
+  "heavy_intensity_shower_rain": {
+    "day": [],
+    "night": [
+      "heavy_intensity_shower_rain_night.mp4"
+    ]
+  },
+  "ragged_shower_rain": {
+    "day": [],
+    "night": []
+  },
+  "light_snow": {
+    "day": [
+      "light_snow-day-01.mp4",
+      "light_snow-day-02.mp4",
+      "light_snow-day-03.mp4",
+      "light_snow-day-04.mp4",
+      "light_snow-day-05.mp4"
+    ],
+    "night": [
+      "light_snow-night-01.mp4",
+      "light_snow-night-02.mp4",
+      "light_snow-night-03.mp4",
+      "light_snow-night-04.mp4",
+      "light_snow-night-05.mp4"
+    ]
+  },
+  "snow": {
+    "day": [
+      "snow-day-01.mp4",
+      "snow-day-02.mp4",
+      "snow-day-03.mp4",
+      "snow-day-04.mp4"
+    ],
+    "night": [
+      "snow-night-01.mp4",
+      "snow-night-02.mp4",
+      "snow-night-03.mp4"
+    ]
+  },
+  "heavy_snow": {
+    "day": [
+      "snow_heavy-day-03.mp4"
+    ],
+    "night": []
+  },
+  "sleet": {
+    "day": [],
+    "night": []
+  },
+  "light_shower_sleet": {
+    "day": [],
+    "night": []
+  },
+  "shower_sleet": {
+    "day": [],
+    "night": []
+  },
+  "light_rain_and_snow": {
+    "day": [],
+    "night": []
+  },
+  "rain_and_snow": {
+    "day": [
+      "rain_and_snow_day_01.mp4"
+    ],
+    "night": []
+  },
+  "light_shower_snow": {
+    "day": [],
+    "night": []
+  },
+  "shower_snow": {
+    "day": [],
+    "night": []
+  },
+  "heavy_shower_snow": {
+    "day": [
+      "heavy_shower_snow-day-01.mp4",
+      "heavy_shower_snow-day-02.mp4"
+    ],
+    "night": [
+      "heavy_shower_snow-night-01.mp4",
+      "heavy_shower_snow-night-02.mp4",
+      "heavy_shower_snow-night-03.mp4"
+    ]
+  },
+  "mist": {
+    "day": [
+      "mist-day-01.mp4",
+      "mist-day-02.mp4",
+      "mist-day-03.mp4",
+      "mist-day-04.mp4"
+    ],
+    "night": [
+      "mist-night-01.mp4",
+      "mist-night-02.mp4",
+      "mist-night-03.mp4",
+      "mist-night-04.mp4"
+    ]
+  },
+  "smoke": {
+    "day": [
+      "smoke_day-01.mp4",
+      "smoke_day-02.mp4",
+      "smoke_day-03.mp4",
+      "smoke_day-04.mp4"
+    ],
+    "night": [
+      "smoke_night-01.mp4",
+      "smoke_night-02.mp4",
+      "smoke_night-03.mp4",
+      "smoke_night-04.mp4"
+    ]
+  },
+  "haze": {
+    "day": [
+      "haze-day-01.mp4",
+      "haze-day-02.mp4",
+      "haze-day-03.mp4",
+      "haze-day-04.mp4",
+      "haze-day-05.mp4",
+      "haze-day-06.mp4",
+      "haze-day-07.mp4"
+    ],
+    "night": [
+      "haze-night-01.mp4",
+      "haze-night-02.mp4",
+      "haze-night-03.mp4",
+      "haze-night-04.mp4"
+    ]
+  },
+  "sand_dust_whirls": {
+    "day": [],
+    "night": []
+  },
+  "fog": {
+    "day": [
+      "fog-day-01.mp4",
+      "fog-day-02.mp4",
+      "fog-day-03.mp4",
+      "fog-day-04.mp4",
+      "fog-day-05.mp4"
+    ],
+    "night": [
+      "fog-night-01.mp4",
+      "fog-night-02.mp4",
+      "fog-night-03.mp4",
+      "fog-night-04.mp4",
+      "fog-night-05.mp4",
+      "fog-night-06.mp4"
+    ]
+  },
+  "sand": {
+    "day": [],
+    "night": []
+  },
+  "dust": {
+    "day": [],
+    "night": []
+  },
+  "volcanic_ash": {
+    "day": [
+      "volcanic_ash-day-01.mp4",
+      "volcanic_ash-day-02.mp4",
+      "volcanic_ash-day-03.mp4"
+    ],
+    "night": [
+      "volcanic_ash-night-01.mp4",
+      "volcanic_ash-night-02.mp4",
+      "volcanic_ash-night-03.mp4",
+      "volcanic_ash-night-04.mp4",
+      "volcanic_ash-night-05.mp4"
+    ]
+  },
+  "squalls": {
+    "day": [],
+    "night": []
+  },
+  "tornado": {
+    "day": [
+      "tornado-day-01.mp4",
+      "tornado-day-02.mp4",
+      "tornado-day-03.mp4",
+      "tornado-day-04.mp4",
+      "tornado-day-05.mp4",
+      "tornado-day-06.mp4"
+    ],
+    "night": [
+      "tornado-night-01.mp4",
+      "tornado-night-02.mp4",
+      "tornado-night-03.mp4",
+      "tornado-night-04.mp4"
+    ]
+  },
+  "clear_sky": {
+    "day": [
+      "clear_sky-day-01.mp4",
+      "clear_sky-day-02.mp4",
+      "clear_sky-day-03.mp4",
+      "clear_sky-day-04.mp4",
+      "clear_sky-day-05.mp4"
+    ],
+    "night": [
+      "clear_sky-night-01.mp4",
+      "clear_sky-night-02.mp4",
+      "clear_sky-night-03.mp4",
+      "clear_sky-night-04.mp4",
+      "clear_sky-night-05.mp4",
+      "clear_sky-night-06.mp4"
+    ]
+  },
+  "few_clouds": {
+    "day": [
+      "few_clouds-day-01.mp4",
+      "few_clouds-day-02.mp4",
+      "few_clouds-day-03.mp4",
+      "few_clouds-day-04.mp4",
+      "few_clouds-day-05.mp4",
+      "few_clouds-day-06.mp4"
+    ],
+    "night": [
+      "few_clouds-night-01.mp4"
+    ]
+  },
+  "scattered_clouds": {
+    "day": [
+      "scattered_clouds-day-01.mp4",
+      "scattered_clouds-day-02.mp4",
+      "scattered_clouds-day-03.mp4"
+    ],
+    "night": []
+  },
+  "broken_clouds": {
+    "day": [
+      "broken_clouds-day-01.mp4",
+      "broken_clouds-day-02.mp4",
+      "broken_clouds-day-03.mp4",
+      "broken_clouds-day-04.mp4",
+      "broken_clouds-day-05.mp4",
+      "broken_clouds-day-06.mp4"
+    ],
+    "night": [
+      "broken_clouds-night-01.mp4",
+      "broken_clouds-night-02.mp4",
+      "broken_clouds-night-03.mp4",
+      "broken_clouds-night-04.mp4"
+    ]
+  },
+  "overcast_clouds": {
+    "day": [
+      "overcast_clouds-day-01.mp4",
+      "overcast_clouds-day-02.mp4",
+      "overcast_clouds-day-03.mp4",
+      "overcast_clouds-day-04.mp4",
+      "overcast_clouds-day-05.mp4",
+      "overcast_clouds-day-06.mp4",
+      "overcast_clouds-day-07.mp4"
+    ],
+    "night": [
+      "overcast_clouds-night-01.mp4",
+      "overcast_clouds-night-02.mp4",
+      "overcast_clouds-night-03.mp4",
+      "overcast_clouds-night-04.mp4"
+    ]
+  }
+}

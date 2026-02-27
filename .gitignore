@@ -23,7 +23,6 @@ testem.log
 typings/
 .angular/
 !media/video/
-dist/
 
 # e2e
 e2e/*.js

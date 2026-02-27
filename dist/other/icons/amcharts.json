@@ -1,0 +1,230 @@
+{
+  "options": {
+    "alias": "amcharts",
+    "type": [
+      "static",
+      "animated"
+    ],
+    "path": "/media/icons/weather/amcharts/"
+  },
+  "thunderstorm_with_light_rain": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm_with_rain": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm_with_heavy_rain": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "light_thunderstorm": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "heavy_thunderstorm": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "ragged_thunderstorm": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm_with_light_drizzle": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm_with_drizzle": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "thunderstorm_with_heavy_drizzle": {
+    "day": "thunder.svg",
+    "night": "thunder.svg"
+  },
+  "light_intensity_drizzle": {
+    "day": "rainy-1.svg",
+    "night": "rainy-1.svg"
+  },
+  "drizzle": {
+    "day": "rainy-2.svg",
+    "night": "rainy-2.svg"
+  },
+  "heavy_intensity_drizzle": {
+    "day": "rainy-3.svg",
+    "night": "rainy-3.svg"
+  },
+  "light_intensity_drizzle_rain": {
+    "day": "rainy-1.svg",
+    "night": "rainy-1.svg"
+  },
+  "drizzle_rain": {
+    "day": "rainy-2.svg",
+    "night": "rainy-2.svg"
+  },
+  "heavy_intensity_drizzle_rain": {
+    "day": "rainy-3.svg",
+    "night": "rainy-3.svg"
+  },
+  "shower_rain_and_drizzle": {
+    "day": "rainy-3.svg",
+    "night": "rainy-3.svg"
+  },
+  "heavy_shower_rain_and_drizzle": {
+    "day": "rainy-4.svg",
+    "night": "rainy-4.svg"
+  },
+  "shower_drizzle": {
+    "day": "rainy-2.svg",
+    "night": "rainy-2.svg"
+  },
+  "light_rain": {
+    "day": "rainy-4.svg",
+    "night": "rainy-4.svg"
+  },
+  "moderate_rain": {
+    "day": "rainy-5.svg",
+    "night": "rainy-5.svg"
+  },
+  "heavy_intensity_rain": {
+    "day": "rainy-6.svg",
+    "night": "rainy-6.svg"
+  },
+  "very_heavy_rain": {
+    "day": "rainy-7.svg",
+    "night": "rainy-7.svg"
+  },
+  "extreme_rain": {
+    "day": "rainy-7.svg",
+    "night": "rainy-7.svg"
+  },
+  "freezing_rain": {
+    "day": "rainy-7.svg",
+    "night": "rainy-7.svg"
+  },
+  "light_intensity_shower_rain": {
+    "day": "rainy-4.svg",
+    "night": "rainy-4.svg"
+  },
+  "shower_rain": {
+    "day": "rainy-5.svg",
+    "night": "rainy-5.svg"
+  },
+  "heavy_intensity_shower_rain": {
+    "day": "rainy-6.svg",
+    "night": "rainy-6.svg"
+  },
+  "ragged_shower_rain": {
+    "day": "rainy-5.svg",
+    "night": "rainy-5.svg"
+  },
+  "light_snow": {
+    "day": "snowy-1.svg",
+    "night": "snowy-1.svg"
+  },
+  "snow": {
+    "day": "snowy-3.svg",
+    "night": "snowy-3.svg"
+  },
+  "heavy_snow": {
+    "day": "snowy-6.svg",
+    "night": "snowy-6.svg"
+  },
+  "sleet": {
+    "day": "snowy-4.svg",
+    "night": "snowy-4.svg"
+  },
+  "light_shower_sleet": {
+    "day": "snowy-2.svg",
+    "night": "snowy-2.svg"
+  },
+  "shower_sleet": {
+    "day": "snowy-4.svg",
+    "night": "snowy-4.svg"
+  },
+  "light_rain_and_snow": {
+    "day": "snowy-2.svg",
+    "night": "snowy-2.svg"
+  },
+  "rain_and_snow": {
+    "day": "snowy-3.svg",
+    "night": "snowy-3.svg"
+  },
+  "light_shower_snow": {
+    "day": "snowy-1.svg",
+    "night": "snowy-1.svg"
+  },
+  "shower_snow": {
+    "day": "snowy-4.svg",
+    "night": "snowy-4.svg"
+  },
+  "heavy_shower_snow": {
+    "day": "snowy-6.svg",
+    "night": "snowy-6.svg"
+  },
+  "mist": {
+    "day": "cloudy.svg",
+    "night": "cloudy.svg"
+  },
+  "smoke": {
+    "day": "cloudy.svg",
+    "night": "cloudy.svg"
+  },
+  "haze": {
+    "day": "cloudy-day-1.svg",
+    "night": "cloudy-night-1.svg"
+  },
+  "sand_dust_whirls": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "fog": {
+    "day": "cloudy.svg",
+    "night": "cloudy.svg"
+  },
+  "sand": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "dust": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "volcanic_ash": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "squalls": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "tornado": {
+    "day": "weather.svg",
+    "night": "weather.svg"
+  },
+  "clear_sky": {
+    "day": "day.svg",
+    "night": "night.svg"
+  },
+  "few_clouds": {
+    "day": "cloudy-day-1.svg",
+    "night": "cloudy-night-1.svg"
+  },
+  "scattered_clouds": {
+    "day": "cloudy-day-2.svg",
+    "night": "cloudy-night-2.svg"
+  },
+  "broken_clouds": {
+    "day": "cloudy-day-3.svg",
+    "night": "cloudy-night-3.svg"
+  },
+  "overcast_clouds": {
+    "day": "cloudy.svg",
+    "night": "cloudy.svg"
+  }
+}

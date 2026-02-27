@@ -3,7 +3,7 @@
   "render_readme": true,
   "content_in_root": false,
   "zip_release": true,
-  "filename": "weather-big-wall-clock.zip",
+  "filename": "ha-weather-big-wall-clock.js",
   "domain": "weather-big-wall-clock",
   "country": "ALL",
   "homeassistant": "2026.2.3"
