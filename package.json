@@ -2,32 +2,33 @@
   "name": "ha-weather-big-wall-clock",
   "version": "1.0.0",
   "description": "Home Assistant Weather Clock Card with video backgrounds",
-  "author": "Zaharia Constantin",
+  "author": "SoulRaven",
   "license": "SEE LICENSE IN LICENSE",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "watch": "NODE_ENV=development webpack --watch",
-    "build:media": "node scripts/generate-hls.js"
+    "watch": "NODE_ENV=development webpack --watch"
   },
   "keywords": [
     "home-assistant",
     "custom-card",
     "weather",
-    "clock"
+    "clock",
+    "vide-background",
+    "big-clock",
+    "wall-clock"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/custom-cards/weather-big-wall-clock.git"
+    "url": "git+https://github.com/SoulRaven/ha-big-weather-clock.git"
   },
   "bugs": {
-    "url": "https://github.com/custom-cards/weather-big-wall-clock/issues",
+    "url": "https://github.com/SoulRaven/ha-big-weather-clock/issues",
     "email": "constantin.zaharia@sgsolar.ro"
   },
-  "homepage": "https://github.com/custom-cards/weather-big-wall-clock",
+  "homepage": "https://github.com/SoulRaven/ha-big-weather-clock",
   "dependencies": {
-    "hls.js": "^1.6.15",
     "home-assistant-styles-manager": "^3.1.0",
     "lit": "^3.1.0"
   },
