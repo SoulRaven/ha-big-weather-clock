@@ -5,6 +5,9 @@ permissions:
 
 on:
   push:
+    branches:
+      - 'main'
+      - 'releases/**'
     tags:
       - 'v*'
   schedule:
