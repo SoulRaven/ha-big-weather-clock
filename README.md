@@ -17,27 +17,24 @@
 
 ## ✨ Features
 
-- ✅ Large wall-clock optimized for distance viewing
-- ✅ Weather-aware backgrounds (images & videos)
-- ✅ Day / Night automatic theme switching
-- ✅ Designed for kiosk mode tablets & dashboards
-- ✅ Media playlist support
-- ✅ Multiple icon providers
-- ✅ HACS compatible installation
-- ✅ Highly configurable YAML setup
+✅ Large wall-clock optimized for distance viewing<br>
+✅ Weather-aware backgrounds (images & videos)<br>
+✅ Day / Night automatic theme switching<br>
+✅ Designed for kiosk mode tablets & dashboards<br>
+✅ Media playlist support<br>
+✅ Multiple icon providers<br>
+✅ HACS compatible installation<br>
+✅ Highly configurable YAML setup<br>
 
 ***
 
 ## 🧠 Concept
 **This card reimagines the classic Home Assistant wall clock by adding:**
 
-- 🎬 Dynamic backgrounds based on weather conditions
-
-- 🌙 Day/Night themes using the sun entity
-
-- 📺 Optimized layout for always-on displays
-
-- 🖼️ Support for local or remote media libraries
+ 🎬 Dynamic backgrounds based on weather conditions<br>
+ 🌙 Day/Night themes using the sun entity<br>
+ 📺 Optimized layout for always-on displays<br>
+ 🖼️ Support for local or remote media libraries<br>
 
 ### Perfect for:
 
@@ -143,10 +140,10 @@ Currently available options for day/night themes are:
 
 The card supports:
 
-- 📁 Local media
-- 🌐 Remote hosted media
-- 🎞️ Video playlists
-- 🖼️ Image rotation
+📁 Local media<br>
+🌐 Remote hosted media<br>
+🎞️ Video playlists<br>
+🖼️ Image rotation<br>
 
 ⚠️ Videos can consume significant resources.<br>
 For the best performance, host media locally.
@@ -320,12 +317,16 @@ GPL-3.0 License
 
 If you like this project:
 
-- ⭐ Star the repository
-- 🐞 Report issues
-- 💡 Suggest features
+ ⭐ Star the repository<br>
+🐞 Report issues<br>
+💡 Suggest features<br>
 ***
 
 ~~If~~ When you experience issues/bugs with this, the best way to report them is
 to open an issue in **this** repo.
 [Issue link](https://github.com/SoulRaven/ha-weather-big-wall-clock/issues)
 ***
+
+## 👀 Author
+**Zaharia Constantin**<br>
+[View my GitHub profile 💡](https://github.com/soulraven)
