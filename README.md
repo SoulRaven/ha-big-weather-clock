@@ -1,4 +1,4 @@
-## Home Assistant Weather Card with a video/images background
+## 🕒 HA Weather Big Wall Clock
 #### *__readme and docs are work in process, please be patient__*
 
 ![hacs custom](https://img.shields.io/badge/hacs-custom-orange.svg)
@@ -8,33 +8,117 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SoulRaven/ha-big-weather-clock/total)
 ![Last commit](https://img.shields.io/github/last-commit/SoulRaven/ha-weather-big-wall-clock.svg)
 
-### Images of the card
+> 🌤️ A fullscreen Home Assistant Lovelace card designed for wall-mounted tablets,
+> kiosks, and digital photo frames — combining clock, weather, local sensors, and
+> dynamic video/image backgrounds.
+***
+
+## ✨ Features
+
+- ✅ Large wall-clock optimized for distance viewing
+- ✅ Weather-aware backgrounds (images & videos)
+- ✅ Day / Night automatic theme switching
+- ✅ Designed for kiosk mode tablets & dashboards
+- ✅ Media playlist support
+- ✅ Multiple icon providers
+- ✅ HACS compatible installation
+- ✅ Highly configurable YAML setup
+
+***
+
+## 🧠 Concept
+**This card reimagines the classic Home Assistant wall clock by adding:**
+
+- 🎬 Dynamic backgrounds based on weather conditions
+
+- 🌙 Day/Night themes using the sun entity
+
+- 📺 Optimized layout for always-on displays
+
+- 🖼️ Support for local or remote media libraries
+
+### Perfect for:
+
+- Wall-mounted tablets
+- Smart displays
+- Digital photo frames
+
+***
+
+## 🖼️ Preview
+
+***
+
 <p float="center">
   <img src="docs/images/main_image_day.png" width="46%" />
   <img src="docs/images/main_image_night.png" width="46%" />
 </p>
 
-### Installation
-
-#### HACS
-
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=SoulRaven&repository=ha-big-weather-clock&category=plugin)
-
-### Description
-This card is a reinterpretation of the big wall clock cards that are present in the Home Assistant ecosystem, but with a twist that allows you to display videos and images as a background based on the weather conditions and day/night circle with themes for the datetime object.
-Also, part of the card is also icons that are configuration from a list of icons providers.
-
 ### Images and Videos
-Images are stored in the local folder of the dist. However, they also are stored in a hosting space on the web, so you can use them even if you don't want to use HACS, but also you can add your own images by using the media manager configuration.
-Consider also the hosting space is limited and only offered as a bare minimum solution for the community.
-Keep in mind that the card is using a lot of resources, and the video and images are occupation a lot of space, please consider hosting your own images and videos. And use the media manager configuration to point to them.
+
+Images are stored in the local folder of the dist. However, they also are stored
+in a hosting space on the web, so you can use them even if you don't want to use
+HACS, but also you can add your own images by using the media manager
+configuration.
+Consider also the hosting space is limited and only offered as a bare minimum
+solution for the community.
+Keep in mind that the card is using a lot of resources, and the video and images
+are occupation a lot of space, please consider hosting your own images and
+videos. And use the media manager configuration to point to them.
 
 ### Icons
 
-### Themes
+Icons are part of several packs available online from different providers.
+Icons are downloaded from online resources and are using MIT license or Creative
+Commons Attribution 4.0
+
+- [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
+- [MET Weather API icons](https://github.com/metno/weathericons/tree/main)
+- [Makin-Things/weather-icons](https://github.com/Makin-Things/weather-icons)
+- [basmilius/weather-icons](https://github.com/basmilius/weather-icons)
+- [nrkno/yr-warning-icons](https://github.com/nrkno/yr-warning-icons) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
+- [rodrigokamada/openweathermap](https://github.com/rodrigokamada/openweathermap)
+- [erikflowers/weather-icons](https://github.com/erikflowers/weather-icons) - *
+  *not implemented yet**
+***
+
+## 📦 Installation
+
+### ⭐ Recommended — HACS
+
+1. Open HACS
+2. Go to Frontend
+3. Click ⋮ → Custom repositories
+4. Add: https://github.com/SoulRaven/ha-weather-big-wall-clock
+5. Select Category: Dashboard
+6. Install the card
+7. Restart Home Assistant
+
+### or using the link below
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=SoulRaven&repository=ha-big-weather-clock&category=plugin)
+
+### 🔧 Manual Installation
+
+1. Copy the dist folder contents into: */config/www/ha-weather-big-wall-clock/*
+
+2. Add resource:
+```yaml
+lovelace:
+  resources:
+    - url: /local/ha-weather-big-wall-clock/ha-weather-big-wall-clock.js
+      type: module
+```
+3. Reload Home Assistant.
+***
+
+### 🎨 Themes (Day / Night)
+
 For the day/night circle, the card is using the sun entity as default.
 Based on that you have the options to select different themes for the day and night.
+The card automatically switches themes using the sun.sun entity.<br>
 Currently available options for day/night themes are:
+### ☀️ Day Themes
 
 | Type  | Name               | Value              |
 |:------|:-------------------|:-------------------|
@@ -42,28 +126,50 @@ Currently available options for day/night themes are:
 | Day   | `Safety Vivid`     | `safety-vivid`     |
 | Day   | `Solar Bright`     | `solar-bright`     |
 | Day   | `Oceanic`          | `oceanic`          |
+
+### 🌙 Night Themes
+
+| Type  | Name               | Value              |
+|:------|:-------------------|:-------------------|
 | Night | `Night Vision Red` | `night-vision-red` |
 | Night | `Low Light Green`  | `low-light-green`  |
 | Night | `Deep Indigo`      | `deep-indigo`      |
 | Night | `Forest Zen`       | `forest-zen`       |
 
+***
+### 🎬 Media Backgrounds
+
+The card supports:
+
+- 📁 Local media
+- 🌐 Remote hosted media
+- 🎞️ Video playlists
+- 🖼️ Image rotation
+
+⚠️ Videos can consume significant resources.<br>
+For the best performance, host media locally.
+***
+
+### 🌦️ Weather Providers
+| Provider               | Status      |
+|:-----------------------|:------------|
+| OpenWeatherMap         | Implemented |
+| Home Assistant Weather | 🚧 WIP      |
+| ANM                    | 🚧 Planned  |
+***
 
 ### Playlist for images and videos
-
-### Weather providers
-- Home Assistant – not implemented yet
-- OpenWeatherMap - implemented, see the guide below
-- ANM - not implemented yet/WIP
+***
 
 #### Manual
-
 1. Copy the content of the dist archive inside to your `/var/lib/hass/www/ha-weather-big-wall-clock` folder.
 2. Click on `Edit Dashboard`,  `Manage resources` add `/local/ha-weather-big-wall-clock/ha-weather-big-wall-clock.js` as
    `JavaScript Module`.
+***
 
-## Known issues
-- The card is not fully responsive on mobile devices.
-- Sometimes the video will play only a few frames then stops. FIX: refresh the page
+### ⚠️ Known Issues
+- 📱 Mobile responsiveness still improving
+- 🎥 Sometimes the video will play only a few frames then stops. FIX: refresh the page
 
 ### ⚙️ Configuration Settings
 
@@ -147,64 +253,77 @@ And finaly the `bigWeatherClock.yaml` file
 title: Wall Clock
 type: panel
 cards:
-
-- type: custom:big-wall-clock-video
-  day_night_entity: sun.sun
-  timeFormat: 'HH:mm:ss'
-  dateFormat: 'DD-MM-YYYY ddd'
-  timezone: 'Europe/Bucharest'
-  locale: 'ro'
-  showAMPM: true
-  hidePanels: false
-  theme:
-    day: 'solar-bright'
-  webPath: 'https://media.progeek.ro'
-  mediaManager:
-    renderType: 'both'
-    conditionMode: 'description'
-  localSensors:
-    - name: 'Beedroom'
-      device_entity: 'cb87dabaf5ecc0d1beb3a33a4772d4ef'
-      extra_entities:
-    - name: 'Kitchen'
-      device_entity: 'e5a604226563a11b89c8172c2e957831'
-    - name: 'Balcony'
-      device_entity: 'a7e9e6f6543a325d47ffc8aec35f7cde'
-    - name: 'Living'
-      device_entity: '41b8b4b0e732d704dc65db39d02f41d2'
-    - name: 'Victron'
-      extra_entities:
-        - 'sensor.victron_temperature_temperature_6'
-        - 'sensor.victron_battery_temperature_2'
-        - 'sensor.victron_battery_soc_2'
-  weatherConfig:
-    weatherProvider: 'openweathermap'
-    owm_apiKey: !secret openweathermap_api_key
-    owm_description: detailed
-    owm_conditions: detailed
-    language: 'en'
-    showLabels: true
-    units: 'metric'
-    weatherForecastDays: 8
-    icons:
-     iconSet: 'maskinThings'
-     type: 'animated'
-
+  - type: custom:big-wall-clock-video
+    day_night_entity: sun.sun
+    timeFormat: 'HH:mm:ss'
+    dateFormat: 'DD-MM-YYYY ddd'
+    timezone: 'Europe/Bucharest'
+    locale: 'ro'
+    showAMPM: true
+    hidePanels: false
+    theme:
+      day: 'solar-bright'
+    webPath: 'https://media.progeek.ro'
+    mediaManager:
+      renderType: 'both'
+      conditionMode: 'description'
+    localSensors:
+      - name: 'Beedroom'
+        device_entity: 'cb87dabaf5ecc0d1beb3a33a4772d4ef'
+        extra_entities:
+      - name: 'Kitchen'
+        device_entity: 'e5a604226563a11b89c8172c2e957831'
+      - name: 'Balcony'
+        device_entity: 'a7e9e6f6543a325d47ffc8aec35f7cde'
+      - name: 'Living'
+        device_entity: '41b8b4b0e732d704dc65db39d02f41d2'
+      - name: 'Victron'
+        extra_entities:
+          - 'sensor.victron_temperature_temperature_6'
+          - 'sensor.victron_battery_temperature_2'
+          - 'sensor.victron_battery_soc_2'
+    weatherConfig:
+      weatherProvider: 'openweathermap'
+      owm_apiKey: !secret openweathermap_api_key
+      owm_description: detailed
+      owm_conditions: detailed
+      language: 'en'
+      showLabels: true
+      units: 'metric'
+      weatherForecastDays: 8
+      icons:
+       iconSet: 'maskinThings'
+       type: 'animated'
 ```
+***
 
-### Icons are downloaded from online resources and are using MIT license or Creative Commons Attribution 4.0
-- [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
-- [MET Weather API icons](https://github.com/metno/weathericons/tree/main)
-- [Makin-Things/weather-icons](https://github.com/Makin-Things/weather-icons)
-- [basmilius/weather-icons](https://github.com/basmilius/weather-icons)
-- [nrkno/yr-warning-icons](https://github.com/nrkno/yr-warning-icons) - [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/)
-- [rodrigokamada/openweathermap](https://github.com/rodrigokamada/openweathermap)
-- [erikflowers/weather-icons](https://github.com/erikflowers/weather-icons) - **not implemented yet**
+### 🛠️ Development
+```shell
+npm install
+npm run build
+```
+Webpack builds assets into /dist.
+***
 
-### for video the story is a little bit different, and you have to do your own research
+### 🤝 Contributing
 
-## Issues
+Contributions, issues, and feature requests are welcome! <br>
+If you test the card on real wall displays — feedback is extremely valuable.
+
+### 📜 License
+GPL-3.0 License
+***
+
+### ⭐ Support
+
+If you like this project:
+
+- ⭐ Star the repository
+- 🐞 Report issues
+- 💡 Suggest features
+***
 
 ~~If~~ When you experience issues/bugs with this, the best way to report them is
 to open an issue in **this** repo.
 [Issue link](https://github.com/SoulRaven/ha-weather-big-wall-clock/issues)
+***
