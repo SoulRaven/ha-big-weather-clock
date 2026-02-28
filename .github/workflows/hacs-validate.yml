@@ -8,14 +8,15 @@ on:
     branches:
       - 'main'
       - 'releases/**'
+  pull_request:
+    branches:
+      - main
+  create:
     tags:
-      - 'v*'
-  schedule:
-    - cron: "0 0 * * *"
-
+      - "v*"
 jobs:
   validate-hacs:
-    if: github.repository == 'SoulRaven/ha-big-weather-clock'
+    if: github.repository == 'SoulRaven/ha-weather-big-wall-clock'
     runs-on: "ubuntu-latest"
     steps:
       - uses: "actions/checkout@v4"
