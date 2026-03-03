@@ -8,7 +8,8 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/SoulRaven/ha-big-weather-clock/total)
 ![Last commit](https://img.shields.io/github/last-commit/SoulRaven/ha-weather-big-wall-clock.svg)
 [![GitHub issues](https://img.shields.io/github/issues/SoulRaven/ha-weather-big-wall-clock)](https://github.com/SoulRaven/ha-weather-big-wall-clock/issues)
-[![GitHub stars](https://img.shields.io/github/stars/SoulRaven/ha-weather-big-wall-clock)](https://github.com/SoulRaven/ha-weather-big-wall-clock/stargazers)
+![GitHub Repo stars](https://img.shields.io/github/stars/SoulRaven/ha-weather-big-wall-clock?style=flat)
+
 
 > 🌤️ A fullscreen Home Assistant Lovelace card designed for wall-mounted tablets,
 > kiosks, and digital photo frames — combining clock, weather, local sensors, and
