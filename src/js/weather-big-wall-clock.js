@@ -166,6 +166,9 @@ export class WallClockVideo extends EventBusMixin(LitElement) {
 			const nightState = Helpers.isNight(this.day_night_entity, hass);
 
 			if (nightState !== this.is_night) {
+				this.emit('hass:is_night', {
+					is_night: nightState
+				});
 				this.is_night = nightState;
 				this.theme = this.is_night ? Config.get('theme.night') : Config.get('theme.day');
 			}
@@ -319,7 +322,7 @@ export class WallClockVideo extends EventBusMixin(LitElement) {
 			this._updateWeather().then();
 
 			// init the icon manager to be used in the weather conditions and alerts
-			this.iconManager = IconManager.initIconManager(this._hass, this.is_night);
+			this.iconManager = IconManager.initIconManager(this.is_night);
 		}
 
 		// fetch local sensors based on the user config

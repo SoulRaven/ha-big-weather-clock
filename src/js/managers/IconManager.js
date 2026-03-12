@@ -34,7 +34,7 @@ export class IconManager extends EventBusMixin() {
 
 	#mediaPath = Config.get('iconsPath');
 
-	constructor(hass, isNight) {
+	constructor(isNight) {
 		super();
 		this.weatherIcons = weatherIcons;
 		this.alertIcons = alertIcons;
@@ -51,7 +51,6 @@ export class IconManager extends EventBusMixin() {
 			path: `${this.#mediaPath}/alerts/`
 		};
 
-		this.hass = hass || null;
 		this.isNight = isNight;
 
 		this.weatherConfig = { ...this.defaultWeatherIcons, ...Config.get('weatherConfig.icons') };
@@ -60,10 +59,14 @@ export class IconManager extends EventBusMixin() {
 
 		this.iconsSetObj = this.iconsSetWeather;
 		this.iconsSetAlertsObj = this.iconsSetAlerts;
+
+		this.on('hass:is_night', (opt) => {
+			this.isNight = opt.detail.is_night;
+		});
 	}
 
-	static initIconManager(hass, isNight) {
-		return new IconManager(hass, isNight);
+	static initIconManager(isNight) {
+		return new IconManager(isNight);
 	}
 
 	get iconsSetWeather() {

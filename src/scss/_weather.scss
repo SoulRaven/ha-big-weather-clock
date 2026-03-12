@@ -18,13 +18,13 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      border-right: 1px solid var(--primary-color, #eee);
+      border-left: 2px solid var(--primary-color, #eee);
       gap: 10px;
 
       img.weather-current-icon {
         height: 96px;
         transform: scale(1.2);
-        margin-top: 5px;
+        margin: 10px 0 0 10px;
       }
 
       .weather-current-temperature {

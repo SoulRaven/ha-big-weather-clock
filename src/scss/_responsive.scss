@@ -1,14 +1,14 @@
-@media (min-width: 390px) {
-  .big-weather-clock {
-    .middle {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "main-center"
-        "right"
-        "left";
-    }
-  }
-}
+//@media (min-width: 390px) {
+//  .big-weather-clock {
+//    .middle {
+//      grid-template-columns: 1fr;
+//      grid-template-areas:
+//        "main-center"
+//        "right"
+//        "left";
+//    }
+//  }
+//}
 
 @media (max-width: 800px) {
   .big-weather-clock {
@@ -28,14 +28,44 @@
   }
 }
 
-@media (min-width: 1025px) {
+/* 2. Tablet Style (iPads in Landscape & Large Tablets) */
+@media (max-width: 1200px) {
+  .big-weather-clock {
+    .middle {
+      grid-template-areas:
+        "left"
+        "main-center"
+        "right";
+      border-color: #E11845 !important;
+    }
+  }
+}
+
+/* 3. Small Tablet / Mobile Style (iPads in Portrait) */
+@media (max-width: 768px) {
+  .big-weather-clock {
+    .middle {
+      grid-template-areas:
+        "left"
+        "main-center"
+        "right";
+      border-color: #E11845 !important;
+    }
+  }
+}
+
+@media (max-width: 1024px), (min-resolution: 2dppx) {
   .big-weather-clock {
     .middle {
       grid-template-columns:
         minmax(30rem, 1fr)
         minmax(20rem, 3fr)
         minmax(30rem, 1fr);
-      grid-template-areas: "left main-center right";
+      grid-template-areas:
+              "left"
+              "main-center"
+              "right";
+      border-color: #E11845 !important;
 
       .center {
         align-items: center;
